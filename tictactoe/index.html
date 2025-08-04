@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe Game - GameZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <div id="scoreboard">
+      <div class="score xScore">X Wins: <span id="xScore">0</span></div>
+      <h1 id="titleHeader">Choose</h1>
+      <div class="score oScore">O Wins: <span id="oScore">0</span></div>
+    </div>
+
+    <header id="header">
+      <div class="player player-active" id="xPlayerDisplay" onclick="choosePlayer('X')">X</div>
+      <div class="player" id="oPlayerDisplay" onclick="choosePlayer('O')">O</div>
+    </header>
+
+    <div id="board">
+      <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    </div>
+
+    <!-- 🔽 Exit button is placed here with restart -->
+    <div id="buttons">
+      <button id="restartBtn">Restart</button>
+      <a id="exitBtn" href="../index.html">Exit</a>
+    </div>
+  </main>
+
+  <!-- ✅ Link your JavaScript at the end -->
+  <script src="script.js"></script>
+</body>
+</html>

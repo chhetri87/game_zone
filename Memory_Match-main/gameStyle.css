@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@800&display=swap');
+* {
+    font-family: 'Biryani', sans-serif;
+    box-sizing: border-box;
+}
+html, body {
+    width:100vw;
+    height:100vh;
+    margin:0;
+    padding:0;
+}
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #222;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#sidebar {
+    width: 300px;
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(6px);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+    color: #1b4fff;
+    font-weight: bold;
+    text-shadow: 0 2px 8px #fff, 0 1px 0 #4f8cff;
+    letter-spacing: 1px;
+}
+
+#title {
+    background: rgba(91, 233, 244, 0.7);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-radius: 16px;
+    margin: 8px auto;
+    color: #000000;
+    height:56px;
+    max-width: 280px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#gameArea {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: url('images/bg.jpg') center/cover no-repeat;
+    backdrop-filter: blur(3px);
+}
+
+table {
+    border: 8px solid #4f8cff;
+    border-radius: 28px;
+    padding: 36px;
+    background-color: rgba(255,255,255,0.35);
+}
+
+td {
+    background: transparent;
+    height: 120px;
+    width: 120px;
+    padding: 14px;
+}
+td, .inner, .front, .back {
+    border-radius: 12px;
+}
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    box-shadow: 0 2px 8px rgba(79,140,255,0.12);
+    background: #fff;
+    min-width: 100px;
+    min-height: 100px;
+}
+.inner[flip="block"] {
+    box-shadow: 0 0 0 2px #4f8cff;
+}
+.front {
+    background: url('images/card1.png') center center/cover no-repeat;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.15);
+}
+.back {
+    background: #4f8cff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+/* Exit button*/
+.back-button {
+  position: absolute;
+  top: 350px;
+  left: 100px;
+  padding: 8px 14px;
+  background-color: #4f8cff;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #0eb6e0;
+}
+
+
+.back img {
+    width: 90px;
+    height: 90px;
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+#ol {
+    position: fixed;
+    height:100vh;
+    width:100vw;
+    top:0; left:0;
+    background: rgba(79,140,255,0.12);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#iol {
+    background: rgba(255,255,255,0.95);
+    color: #222;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(79,140,255,0.12);
+    padding: 32px 16px;
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center;
+}
+button {
+    background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 24px;
+    margin: 8px;
+    box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+    cursor: pointer;
+}
+button:hover {
+    background: linear-gradient(90deg, #38e8ff 0%, #4f8cff 100%);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Matching Game - gameZone</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/fevicon.PNG" />
+    <link rel="stylesheet" href="gameStyle.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="gameScript.js" defer></script>
+</head>
+<body style="background-image: url('images/bg.jpg'); background-size: cover; background-attachment: fixed;">
+    <div id="ol"></div>
+
+    <div id="container">
+        <div id="sidebar">
+            <div id="title">
+                <span id="logo"><strong>MEMORY MATCHING GAME</strong></span>
+            </div>
+            <div id="info">
+                <div id="levelDisplay"></div>
+                <div id="moves">Moves: 0</div>
+                <div id="steps">Steps Left: 6</div>
+                <div id="time">Time: 00:00</div>
+                <a href="../index.html" class="back-button">Exit</a>
+            </div>
+        </div>
+
+        <div id="gameArea">
+            <table cellspacing="0"></table>
+        </div>
+    </div>
+</body>
+</html>
